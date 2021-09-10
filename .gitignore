@@ -150,12 +150,8 @@ cython_debug/
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode
 
 ### VisualStudioCode ###
+.vscode
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
 
 # Local History for Visual Studio Code
 .history/
