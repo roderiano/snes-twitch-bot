@@ -11,7 +11,7 @@ class Bot(commands.Bot):
         super().__init__(token=config['token'], prefix=config['prefix'], initial_channels=config['channels'])
 
     async def event_ready(self):
-        print(f'Bot connected...')
+        print(f'Bot started.')
 
     @commands.command()
     async def test(self, ctx: commands.Context):
