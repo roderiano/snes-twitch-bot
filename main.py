@@ -1,10 +1,14 @@
 from modules.bot import Bot
+from modules.memory_handler import MemoryHandler
 
 def start_controller():
-    print('Starting Super Mario World...')
+    print('Starting SNES chat controller..')
 
-    bot = Bot()
-    bot.run()
+    memory_handler = MemoryHandler()
+
+    
+    # bot = Bot()
+    # bot.run()
 
 if __name__ == '__main__':
     start_controller()
