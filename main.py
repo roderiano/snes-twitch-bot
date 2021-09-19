@@ -1,12 +1,20 @@
 from modules.bot import Bot
-from modules.memory_handler import MemoryHandler
+from modules.input_handler import InputHandler
+import time
 
 def start_controller():
-    print('Starting SNES chat controller..')
+    print('Starting SNES controller..')
 
-    memory_handler = MemoryHandler()
+    input_handler = InputHandler()
 
-    
+    while True:
+        input_handler.right()
+        input_handler.left()
+        input_handler.up()
+        input_handler.down()
+        time.sleep(1)
+        
+
     # bot = Bot()
     # bot.run()
 
