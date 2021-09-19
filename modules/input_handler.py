@@ -59,9 +59,58 @@ class InputHandler():
         """
 
         ctypes.windll.user32.SetForegroundWindow(emulator_handler)
+
         ctypes.windll.user32.keybd_event(VirtualKey.DOWN.value, 0, 0, 0)
         time.sleep(self.input_duration)
         ctypes.windll.user32.keybd_event(VirtualKey.DOWN.value, 0, 2, 0)
+
+
+    def a(self):     
+        """
+            Method to send A input 
+        """
+
+        ctypes.windll.user32.SetForegroundWindow(emulator_handler)
+
+        ctypes.windll.user32.keybd_event(VirtualKey.V.value, 0, 0, 0)
+        time.sleep(self.input_duration)
+        ctypes.windll.user32.keybd_event(VirtualKey.V.value, 0, 2, 0)
+
+
+    def b(self):     
+        """
+            Method to send B input 
+        """
+    
+        ctypes.windll.user32.SetForegroundWindow(emulator_handler)
+        
+        ctypes.windll.user32.keybd_event(VirtualKey.Z.value, 0, 0, 0)
+        time.sleep(self.input_duration)
+        ctypes.windll.user32.keybd_event(VirtualKey.Z.value, 0, 2, 0)
+
+
+    def x(self):     
+        """
+            Method to send X input 
+        """
+    
+        ctypes.windll.user32.SetForegroundWindow(emulator_handler)
+        
+        ctypes.windll.user32.keybd_event(VirtualKey.C.value, 0, 0, 0)
+        time.sleep(self.input_duration)
+        ctypes.windll.user32.keybd_event(VirtualKey.C.value, 0, 2, 0)
+
+
+    def y(self):     
+        """
+            Method to send Y input 
+        """
+    
+        ctypes.windll.user32.SetForegroundWindow(emulator_handler)
+        
+        ctypes.windll.user32.keybd_event(VirtualKey.X.value, 0, 0, 0)
+        time.sleep(self.input_duration)
+        ctypes.windll.user32.keybd_event(VirtualKey.X.value, 0, 2, 0)
     
 
     def find_emulator_handler(self):
