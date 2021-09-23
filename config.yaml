@@ -1,0 +1,9 @@
+bot:
+  token: '' # twitch access token (https://twitchtokengenerator.com/)
+  prefix: '!' # command prefix
+  channels: # list of channels name
+    - '' 
+input_handler:
+  input_duration: 1.5 # input time by command
+  compatible_emulator:
+    - 'Snes9X'
