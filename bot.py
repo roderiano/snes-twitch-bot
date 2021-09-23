@@ -11,47 +11,54 @@ class Bot(commands.Bot):
     def __init__(self):
         super().__init__(token=config['token'], prefix=config['prefix'], initial_channels=config['channels'])
         self.input_handler = InputHandler()
+        print(f'Starting...')
 
     async def event_ready(self):
-        print(f'SNES bot started...')
+        print('SNES bot started...')
 
 
     @commands.command()
-    async def test(self, ctx: commands.Context):
+    async def help(self, ctx: commands.Context):
         """
-            Test chat communication
+            Command list
         """
-        await ctx.send(f'Tested, {ctx.author.name}!')
+        prefix = config['prefix']
+        await ctx.send(f'Hello, {ctx.author.name}!')
+        
+        for command in self.commands:
+            if command != 'help':
+                description = eval(f'Bot.{command}._callback').__doc__
+                await ctx.send(f'{prefix}{command} -> {description}')
 
 
     @commands.command()
-    async def right(self, ctx: commands.Context):
+    async def r(self, ctx: commands.Context):
         """
-            Send right command to emulator
+            Send Right command to emulator
         """
         self.input_handler.right()
 
 
     @commands.command()
-    async def left(self, ctx: commands.Context):
+    async def l(self, ctx: commands.Context):
         """
-            Send left command to emulator
+            Send Left command to emulator
         """
         self.input_handler.left()
 
 
     @commands.command()
-    async def up(self, ctx: commands.Context):
+    async def u(self, ctx: commands.Context):
         """
-            Send up command to emulator
+            Send Up command to emulator
         """
         self.input_handler.up()
 
 
     @commands.command()
-    async def down(self, ctx: commands.Context):
+    async def d(self, ctx: commands.Context):
         """
-            Send down command to emulator
+            Send Down command to emulator
         """
         self.input_handler.down()
 
