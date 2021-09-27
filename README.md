@@ -1,7 +1,7 @@
 # snes-twitch-bot 
 snes-twitch-bot is a project that controls **SNES9X 1.53** emulator inputs via twitch chat. **This project uses WinAPI**. 
 
-![Alt Text](https://media.giphy.com/media/5hnV7LmdgW2RqhA3i3/giphy.gif)
+![Alt Text](https://i.giphy.com/media/5hnV7LmdgW2RqhA3i3/giphy.webp)
 
 ## Installation
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install dependencies.
